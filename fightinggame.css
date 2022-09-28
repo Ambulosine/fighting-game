@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.container {
+  display: flex;
+  width: 300px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  background-image: url(./fight.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.player1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.player2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#p1Name,
+#p2Name {
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.attack {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.heal {
+  display: flex;
+  justify-content: space-between;
+}
+
+#simulateBtn {
+  background-color: green;
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  width: 70px;
+  max-width: 100%;
+  height: 50px;
+  margin-top: 100px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#attack {
+  cursor: pointer;
+  background-color: yellow;
+  color: black;
+  border: 0;
+  padding: 7px;
+  border-radius: 15px;
+  /* margin-right: 20px; */
+  width: 60px
+}
+
+span {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 2px;
+  color: white;
+}
+
+#heal {
+  background: cyan;
+  border: 0;
+  border-radius: 15px;
+  padding: 7px;
+  width: 60px;
+  cursor: pointer;
+}
+
+#p1health,
+#p2health {
+  font-size: 30px;
+  text-align: center;
+  font-family: cursive;
+  color: white;
+}
+
+#reset {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  padding: 15px;
+  border-radius: 15px;
+  width: 100px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#result {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: green;
+  word-spacing: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

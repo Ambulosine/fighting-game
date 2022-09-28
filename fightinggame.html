@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./fightinggame.css" type="text/css">
+  <title>Fighting Game</title>
+</head>
+
+<body>
+  <br><br><br>
+  <div class="container">
+    <div class="player1">
+      <div id="p1Name">PLAYER 1</div>
+      <img id="p1" src="https://i.gifer.com/origin/00/0019f6845ceaa9347b881ccbe8f5644a_w200.gif">
+      <div class="attack">
+        <span>Q:</span>
+        <button id="attack" onclick="p1.strike(p1, p2, p1.attackDmg)">PUNCH</button>
+      </div>
+      <div class="attack">
+        <span>Z:</span>
+        <button id="attack" onclick="p1.kick(p1, p2, p1.attackDmg)">KICK</button>
+      </div>
+      <div class="heal">
+        <span>A:</span>
+        <button id="heal" onclick="p1.heal(p1)">HEAL</button>
+      </div><br><br>
+      <div id="p1health">100</div>
+    </div>
+    <button id="simulateBtn">SIMULATE</button>
+    <div class="player2">
+      <div id="p2Name">PLAYER 2
+      </div>
+      <img id="p2" src="./player.gif" />
+      <div class="attack">
+        <span>P:</span>
+        <button id="attack" onclick="p2.strike(p2,p1, p2.attackDmg)">PUNCH</button>
+      </div>
+      <div class="attack">
+        <span>M:</span>
+        <button id="attack" onclick="p2.kick(p2, p1, p2.attackDmg)">KICK</button>
+      </div>
+      <div class="heal">
+        <span>L:</span>
+        <button id="heal" onclick="p2.heal(p2)">HEAL</button>
+      </div><br><br>
+      <div id="p2health">100</div>
+    </div>
+    <br><br><br>
+  </div>
+  <div class="resultContainer">
+    <div id="result"></div>
+    <button id="reset" onclick="game.reset(p1,p2)">RESET</button>
+  </div>
+  <script src="./fightinggame.js">
+  </script>
+  <audio id="p1attack" controls style="display:none">
+    <source src="./fastpunch.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="p1heal" controls style="display: none">
+    <source src="./fastheal.mp3" type="audio/mp3">
+  </audio>
+  <audio id="p2attack" src="./quickhit.mp3" controls style="display:none" type="audio/mpeg"></audio>
+  <audio id="p2heal" controls style="display:none">
+    <source src="./quickheal.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="victory" controls style="display:none">
+    <source src="./victory.mp3" type="audio/mpeg">
+  </audio>
+
+</body>
+
+</html>
